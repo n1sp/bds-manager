@@ -37,5 +37,15 @@ services:
     container_name: bds-backend
     ports:
       - "8080:8080"
+    volumes:
+      - ./backend:/app
+      # Mavenの依存関係キャッシュを保持して高速化
+      - maven-repo:/root/.m2
+    # ホスト側のmvnwを直接叩く設定
+    command: ./mvnw spring-boot:run
+    working_dir: /app
     depends_on:
       - bds
+
+volumes:
+  maven-repo: # 依存ライブラリを保存するためのボリューム

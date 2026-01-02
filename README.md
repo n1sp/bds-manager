@@ -155,3 +155,8 @@ docker-compose down -v
 
 未定。  
 依存する Docker イメージ・ライブラリのライセンスは各公式に従う。
+
+## 本番に切り替える場合（backend）
+`docker-compose.yml`内の**開発用設定**の部分にて
+1. volumes をコメントアウト
+2. command をコメントアウト（DockerfileのCMDでjar実行される）
