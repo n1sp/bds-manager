@@ -32,3 +32,10 @@ services:
     stdin_open: true
     tty: true
     restart: unless-stopped
+  backend:
+    build: ./backend
+    container_name: bds-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - bds
