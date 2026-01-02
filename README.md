@@ -30,8 +30,8 @@ bds-manager
 │  └─ (Spring Boot)
 ├─ frontend/
 │  └─ (Next.js / React)
-├─ volumes/
-│  └─ bds-world/
+├─ data/
+│  └─ （worlds etc）
 └─ README.md
 ```
 
@@ -64,7 +64,7 @@ bds-manager
 ### リポジトリのクローン
 
 ```bash
-git clone git@github.com:your-org/bds-manager.git
+git clone git@github.com:n1sp/bds-manager.git
 cd bds-manager
 ```
 
@@ -92,7 +92,7 @@ docker-compose up -d --build
 
 起動後の想定：
 
-- BDS（Bedrock）：UDP `19132`
+- BDS（Bedrock）：UDP `19133`
 - Backend API：`http://localhost:8080`
 - Frontend：`http://localhost:3000`
 
